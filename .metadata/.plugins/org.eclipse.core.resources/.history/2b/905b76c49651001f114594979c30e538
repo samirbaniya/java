@@ -1,0 +1,63 @@
+package com.nist.javatry2;
+
+import java.util.Scanner;
+
+public class greatestNumber {
+	public static void main(String[] args) {
+		Scanner scInt=new Scanner(System.in);
+		System.out.println("Enter any three numbers: "); 
+		int a=scInt.nextInt();
+		int b=scInt.nextInt();
+		int c=scInt.nextInt();
+		int greatest;
+		int smallest;
+		int middle;
+		//greatest number
+		if(a>=b&&a>=c) {
+			greatest=a;
+			System.out.println(a+"is Greatest Number."); 
+		}
+		else if(b>=c) {
+			greatest=b;
+			System.out.println(b+"is Greatest Number.");
+		}
+		else {
+			greatest=c;
+			System.out.println(c+"is Greatest Number.");
+		}
+		
+		
+		
+		//for smallest number
+		if(a<=b&&a<=c) {
+			smallest=a;
+			System.out.println(a+"is Smallest Number."); 
+		}
+		else if(b<=c) {
+			smallest=a;
+			System.out.println(b+"is Smallest Number.");
+		}
+		else {
+			smallest=a;
+			System.out.println(c+"is Smallest Number.");
+		}
+		
+		//for middle number
+		if(a<b&&a>c||a>b&&a<c) {
+			middle=a;
+			System.out.println(a+"is Middle Number."); 
+		}
+		else if(b>c&&b<a||b<c&&b>a) {
+			middle=b;
+			System.out.println(b+"is Middle Number.");
+		}
+		else {
+			middle=a;
+			System.out.println(c+"is Middle Number.");
+		}
+		
+		System.out.println(smallest+"is Smallest Number.");
+		System.out.println(middle+"is Middle Number.");
+		System.out.println(greatest+"is Greatest Number.");
+	}
+}
