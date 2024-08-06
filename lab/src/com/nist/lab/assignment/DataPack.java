@@ -20,7 +20,7 @@ public class DataPack {
 	}
 	
 	public void ntcDataPack() {
-		System.out.println("1)Prepaid Packs\n2)Unltd Night Packs\n3)Voice\n4)G\n5)Unlimited ");
+		System.out.println("1)Prepaid Packs\n2)Unltd Night Packs\n3)Voice\n4)4G\n5)Unlimited ");
 		int userInput=scInt.nextInt();
 		if(userInput==1) {
 			PrepaidPacks();
@@ -34,9 +34,9 @@ public class DataPack {
 		else if(userInput==4) {
 			for4G();
 		}
-//		else if(userInput==5) {
-//			Unlimited();
-//		}
+		else if(userInput==5) {
+			Unlimited();
+		}
 		else {
 			System.out.println("Invalid Choice.");
 		}
@@ -140,7 +140,7 @@ public class DataPack {
 		else if(userInput==3) {
 			System.out.println("You Have Choosed 299Min@Rs159-28D.");
 		}
-		else if(userInput==3) {
+		else if(userInput==4) {
 			System.out.println("You Have Choosed 555Min@Rs269-28D.");
 		}
 		else {
@@ -161,7 +161,7 @@ public class DataPack {
 		else if(userInput==3) {
 			System.out.println("You Have Choosed 299Min@Rs169-28D.");
 		}
-		else if(userInput==3) {
+		else if(userInput==4) {
 			System.out.println("You Have Choosed 555Min@Rs279-28D.");
 		}
 		else {
@@ -182,8 +182,29 @@ public class DataPack {
 		else if(userInput==3) {
 			System.out.println("You Have Choosed 5GB@Rs109-7D.");
 		}
-		else if(userInput==3) {
+		else if(userInput==4) {
 			System.out.println("You Have Choosed 12GB@Rs199-7D.");
+		}
+		else {
+			System.out.println("You Have Choosed Invalid Choice.");
+		}
+	}
+	
+	public void Unlimited() {
+		System.out.println("1)Voice+Data@Rs 24-1HR"
+				+ "\n2)Data@Rs35-2HRS\n3)5Mbps@Rs89-1D\n4)5Mbps@Rs999-28D");
+		int userInput=scInt.nextInt();
+		if(userInput==1) {
+			System.out.println("You Have Choosed Voice+Data@Rs 24-1HR.");
+		}
+		else if(userInput==2) {
+			System.out.println("You Have Choosed Data@Rs35-2HRS.");
+		}
+		else if(userInput==3) {
+			System.out.println("You Have Choosed 5Mbps@Rs89-1D.");
+		}
+		else if(userInput==4) {
+			System.out.println("You Have Choosed 5Mbps@Rs999-28D.");
 		}
 		else {
 			System.out.println("You Have Choosed Invalid Choice.");
