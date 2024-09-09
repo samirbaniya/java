@@ -1,5 +1,8 @@
 package com.nist.swingtry.test;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -8,7 +11,7 @@ import javax.swing.JTextField;
 public class Student1 {
 public static void main(String[] args) {
 	JFrame frame=new JFrame();
-	frame.setSize(400,400);
+	frame.setSize(500,500);
 	frame.setResizable(false);
 	frame.setTitle("Student Form");
 	frame.setLayout(null);
@@ -57,6 +60,32 @@ public static void main(String[] args) {
 	JButton button =new JButton("Submit");
 	button.setBounds(20,310,100,50);
 	frame.add(button);
+	
+	ActionListener readData = new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			String name = t1.getText();
+			String roll = t2.getText();
+			String address = t3.getText();
+			String age = t4.getText();
+			String gender = t5.getText();
+			if(!name.equals("")
+					&&!name.equals("")
+					&&!roll.equals("")
+					&&!address.equals("")
+					&&!age.equals("")
+					&&!name.equals("")) {
+			System.out.println("Name is "+name);
+			System.out.println("Roll No.:"+roll);
+			System.out.println("Address:"+address);
+			System.out.println("Age:"+age);
+			System.out.println("Gender:"+gender);
+			}
+		}
+	};
+	button.addActionListener(readData);
+	
 	
 	frame.setVisible(true);
 }

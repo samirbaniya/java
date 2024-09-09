@@ -39,33 +39,95 @@ public static void main(String[] args) {
 	t3.setEditable(false);
 	jframe.add(t3);
 	
-	JButton button = new JButton("Add");
-	button.setBounds(120, 160, 100, 30);
-	jframe.add(button);
+	JButton addbtn = new JButton("+");
+	addbtn.setBounds(10, 160, 100, 30);
+	jframe.add(addbtn);
 	
-	ActionListener obj = new ActionListener() {
+
+	
+	ActionListener add = new ActionListener() {
 		
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			System.out.println("Pressed");
-			String num = t1.getText();//"20"
-			String num1 = t2.getText();//"10"
-			int a = Integer.parseInt(num);//20
-			int b = Integer.parseInt(num1);//10
-			int c=a+b;//30
+//			System.out.println("Pressed");
+			String num1 = t1.getText();//"20"
+			String num2 = t2.getText();//"10"
+			int a = Integer.parseInt(num1);//20
+			int b = Integer.parseInt(num2);//10
+			int c = a + b;//30
 			String result = String.valueOf(c);//"30"
 			t3.setText(result);
 			
 			
 		}
 	};
-	button.addActionListener(obj);
+	addbtn.addActionListener(add);
+	
+	JButton subbtn = new JButton("-");
+	subbtn.setBounds(120, 160, 100, 30);
+	jframe.add(subbtn);
+	
+	ActionListener sub = new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			String num1 = t1.getText();
+			String num2 = t2.getText();
+			int a = Integer.parseInt(num1);
+			int b = Integer.parseInt(num2);
+			int c = a - b;
+			String result = String.valueOf(c);
+			t3.setText(result);
+			
+		}
+	};
+	subbtn.addActionListener(sub);
+	
+	
+	
+	JButton divbtn = new JButton("/");
+	divbtn.setBounds(10, 200, 100, 30);
+	jframe.add(divbtn);
+	
+	ActionListener div = new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			String num1 = t1.getText();
+			String num2 = t2.getText();
+			float a = Float.parseFloat(num1);
+			float b = Float.parseFloat(num2);
+			float c = a/b;
+			String result = String.valueOf(c);
+			t3.setText(result);
+		}
+	};
+	divbtn.addActionListener(div);
+	
+	JButton productbtn = new JButton("x");
+	productbtn.setBounds(120, 200, 100, 30);
+	jframe.add(productbtn);
+	
+	ActionListener product = new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			String num1 = t1.getText();
+			String num2 = t2.getText();
+			int a = Integer.parseInt(num1);
+			int b = Integer.parseInt(num2);
+			int c = a * b;
+			String result = String.valueOf(c);
+			t3.setText(result);
+		}
+	};
+	productbtn.addActionListener(product);
 	
 	JButton clearbtn = new JButton("Clear");
-	clearbtn.setBounds(230, 160, 100, 30);
+	clearbtn.setBounds(70, 240, 100, 30);
 	jframe.add(clearbtn);
 	
-	ActionListener obj1 = new ActionListener() {
+	ActionListener clear = new ActionListener() {
 		
 		@Override
 		public void actionPerformed(ActionEvent e) {
@@ -74,7 +136,7 @@ public static void main(String[] args) {
 			t3.setText("");
 		}
 	};
-	clearbtn.addActionListener(obj1);
+	clearbtn.addActionListener(clear);
 	
 	jframe.setVisible(true);
 }
