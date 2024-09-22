@@ -1,6 +1,7 @@
 package com.nist.swingtry3.demo;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 
 public class DatabaseConnection {
