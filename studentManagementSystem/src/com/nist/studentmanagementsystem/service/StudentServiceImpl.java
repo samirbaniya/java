@@ -1,6 +1,8 @@
 package com.nist.studentmanagementsystem.service;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.nist.studentmanagementsystem.dtabaseconnection.DatabaseConnection;
@@ -28,9 +30,29 @@ public class StudentServiceImpl implements StudentService {
 	}
 
 	@Override
-	public List<Student> getStudentList() {
+	public ArrayList<Student> getStudentList() {
+		ArrayList<Student> studentList = new ArrayList<Student>();
 		String sql ="select * from students";
-		return null;
+		try {
+			ps = DatabaseConnection.getConnection().prepareStatement(sql);
+			ResultSet rs=ps.executeQuery();
+			while(rs.next()) {
+				Student student = new Student();
+				student.setId(rs.getString("id"));
+				student.setFirstName(rs.getString("first_name"));
+				student.setLastName(rs.getString("last_name"));
+				student.setAddress(rs.getString("address"));
+				student.setContactNumber(rs.getLong("contact"));
+				student.setGender(rs.getString("gender"));
+				studentList.add(student);
+			}
+			
+			
+			}catch(Exception e) {
+				System.out.println(e);
+			}
+		
+		return studentList;
 	}
 
 }
