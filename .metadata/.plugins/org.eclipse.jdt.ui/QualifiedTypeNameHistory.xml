@@ -5,7 +5,6 @@
     <fullyQualifiedTypeName name="com.nist.javatry2.Tes1t"/>
     <fullyQualifiedTypeName name="java.lang.OutOfMemoryError"/>
     <fullyQualifiedTypeName name="com.nist.javatry1.DataPack"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.io.FileWriter"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
@@ -20,8 +19,10 @@
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="com.nist.studentmanagementsystem.dtabaseconnection.DatabaseConnection"/>
-    <fullyQualifiedTypeName name="javax.swing.table.DefaultTableModel"/>
-    <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
     <fullyQualifiedTypeName name="com.nist.studentmanagementsystem.service.StudentService"/>
     <fullyQualifiedTypeName name="com.nist.studentmanagementsystem.service.StudentServiceImpl"/>
+    <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
+    <fullyQualifiedTypeName name="javax.swing.table.DefaultTableModel"/>
+    <fullyQualifiedTypeName name="com.nist.studentmanagementsystem.model.Student"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

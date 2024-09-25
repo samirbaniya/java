@@ -1,11 +1,13 @@
 package com.nist.studentmanagementsystem.model;
 
 public class Student {
-private String firstName, lastName, address, gender,id;
-public String getId() {
+private String firstName, lastName, address, gender;
+private int id;
+
+public int getId() {
 	return id;
 }
-public void setId(String id) {
+public void setId(int id) {
 	this.id = id;
 }
 private long contactNumber;
