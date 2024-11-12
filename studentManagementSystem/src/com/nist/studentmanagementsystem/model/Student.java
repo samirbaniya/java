@@ -3,6 +3,7 @@ package com.nist.studentmanagementsystem.model;
 public class Student {
 private String firstName, lastName, address, gender;
 private int id;
+private long contactNumber;
 
 public int getId() {
 	return id;
@@ -10,7 +11,6 @@ public int getId() {
 public void setId(int id) {
 	this.id = id;
 }
-private long contactNumber;
 public String getFirstName() {
 	return firstName;
 }
@@ -41,6 +41,4 @@ public long getContactNumber() {
 public void setContactNumber(long contactNumber) {
 	this.contactNumber = contactNumber;
 }
-
-
 }

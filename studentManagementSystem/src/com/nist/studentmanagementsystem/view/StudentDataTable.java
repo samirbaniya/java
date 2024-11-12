@@ -14,12 +14,16 @@ import com.nist.studentmanagementsystem.service.StudentService;
 import com.nist.studentmanagementsystem.service.StudentServiceImpl;
 
 import javax.swing.JTable;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
 
 public class StudentDataTable extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable table;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -53,15 +57,26 @@ public class StudentDataTable extends JFrame {
 		
 		
 		table = new JTable();
-		table.setBounds(10, 11, 490, 282);
+		table.setBounds(10,108,582,109);
 		contentPane.add(table);
 		
 		DefaultTableModel tableModel = new DefaultTableModel(colNames,0);
 		table.setModel(tableModel);
 		
 		JScrollPane scrollPane = new JScrollPane(table);
-		scrollPane.setBounds(10,11,582,172);
+		scrollPane.setBounds(10,108,582,109);
 		contentPane.add(scrollPane);
+		
+		JLabel lblNewLabel = new JLabel("Search");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblNewLabel.setBounds(156, 46, 64, 29);
+		contentPane.add(lblNewLabel);
+		
+		textField = new JTextField();
+		textField.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		textField.setBounds(226, 46, 122, 29);
+		contentPane.add(textField);
+		textField.setColumns(10);
 		loadDataInTable();
 	}
 	
@@ -73,7 +88,8 @@ public class StudentDataTable extends JFrame {
 		tableModel.setRowCount(0);
 		
 		for(Student student:studentList) {
-			tableModel.addRow(new Object[] {student.getId(),student.getFirstName(),student.getLastName(),student.getContactNumber(),student.getAddress(),student.getGender()});
+			tableModel.addRow(new Object[] {student.getId(),student.getFirstName(),
+					student.getLastName(),student.getContactNumber(),student.getAddress(),student.getGender()});
 		}
 	}
 }
