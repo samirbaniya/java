@@ -17,7 +17,9 @@
             <input type="text" name="address"><br><br>
 
 			<label for="contact">Contact Number</label>
-            <input type="tel" name="contact" pattern="[0-9]{10}" placeholder="9841554532"><br><br>
+           <%-- <input type="tel" name="contact" pattern="[0-9]{10}" placeholder="9841554532"><br><br>--%>
+            <input type="number" name="contact" placeholder="9841554532"><br><br>
+
 
             <label for="gender">Gender</label>
             <select name="gender">
